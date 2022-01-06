@@ -24,4 +24,19 @@ const swiper = new Swiper('.wrap', {
         modifier: 1,
         slideShadows: false,
     },
+    autoplay: {
+        delay: 1000,
+        disableOnInteraction: true,
+    },
+});
+
+const btnStart = document.querySelector('.btnStart');
+const btnStop = document.querySelector('.btnStop');
+
+btnStart.addEventListener('click', () => {
+    swiper.autoplay.start();
+});
+
+btnStop.addEventListener('click', () => {
+    swiper.autoplay.stop();
 });
